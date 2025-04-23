@@ -10,11 +10,17 @@
 <body>
     <header class="cabecalho">
         <a href="index.html">SENAIFLIX</a>
+        <img id="menu=btn" class="hamburger-menu" src="../assets/icons/MenuHam.png" alt="Menu">
         <nav>
             <a href="#">Início</a>
             <a href="#titulo-filmes">Filmes</a>
             <a href="#titulo-series">Séries</a>
         </nav>
+        <nav class="menu-mobile" id="menu-mobile">
+            <a href="#">Início</a>
+            <a href="#titulo-filmes">Filmes</a>
+            <a href="#titulo-series">Séries</a>
+          </nav>
     </header>
     <main>
         <section class="banner">
@@ -29,9 +35,9 @@
                 <input type="text" placeholder="Insira um título" id="pesquisar">
             </div>
 
-            <div class="filtro">
-                <label for="">Filtrar por gênero:</label>
-                <select name="genero" id="">
+            <div  class="filtro">
+                <label for="genero">Filtrar por gênero:</label>
+                <select name="genero" id="genero">
                     <option selected value="">Selecione um gênero</option>
                     <option value="Drama">Drama</option>
                     <option value="Romance">Romance</option>
@@ -47,12 +53,13 @@
                     <option value="Mistério">Mistério</option>
                     <option value="Sci-Fi & Fantasy">Sci-Fi & Fantasy</option>
                 </select>
-                <button class="limpar-filtros">Limpar filtros</button>
+                <button id="Limpar-filtros" class="limpar-filtros">Limpar filtros</button>
             </div>
         </div>
         <section class="filmes-series">
+            <section  class="filmes-series">
             <h2 id="titulo-filmes">Filmes</h2>
-            <div class="card-container">
+            <div id="filmes-container" class="card-container">
                 <a href="../detalhes-do-filme/index.html" class="card"></a>
                 <a href="../detalhes-do-filme/index.html" class="card"></a>
                 <a href="../detalhes-do-filme/index.html" class="card"></a>
@@ -61,9 +68,8 @@
                 <a href="../detalhes-do-filme/index.html" class="card"></a>
             </div>
         </section>
-        <section class="filmes-series">
-            <h2 id="titulo-series">Séries</h2>
-            <div class="card-container">
+        <div id="series-container" class="card-container">
+                <h2 id="titulo-series">Séries</h2>
                 <a href="../detalhes-do-filme/index.html" class="card"></a>
                 <a href="../detalhes-do-filme/index.html" class="card"></a>
                 <a href="../detalhes-do-filme/index.html" class="card"></a>
@@ -82,4 +88,7 @@
         </div>
     </footer>
 </body>
+<script src="../Scripts/scripts.js"></script>
+<!-- se for por la encima embaixo do link do css:
+ <script defer src="../Scripts/scripts.js"></script> -->
 </html>
